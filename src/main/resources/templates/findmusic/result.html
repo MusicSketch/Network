@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/common.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/result.css}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+<!--메인 로고-->
+<h1 id="titlelogo" onclick="deletelist()">Music Sketch</h1>
+<hr id="titleline"/>
+
+<!--로그인/회원가입-->
+<h1 id="welcome">스케치님 환영합니다</h1>
+<!--<button onclick="location.href='/login/login'" id="main-login">로그인</button>-->
+<button onclick="location.href='/login/join'" id="main-join">로그아웃</button>
+
+<!--서브 타이틀-->
+<img src="/img/music_note.png" id="musiclistresulticon"/>
+<h1 id="musiclistresultname">지금 나에게 맞는 음악</h1>
+<hr id="listresultline"/>
+
+<!--음악 리스트-->
+<div style="margin-left: -150px; margin-top: 350px;">
+    <ul id="musiclist" th:each="musicList : ${ musicList }">
+        <li id="musiclistimg">
+            <img th:src="@{/musicimg/} + ${ musicList.musicCode } + @{.jpg}">
+        </li>
+        <ul>
+            <li id="temp">
+                <h1 id="musiclisttitle" th:text="${ musicList.musicTitle }"></h1><br>
+            </li>
+            <li id="musiclistsinger">
+                <h1 th:text="${ musicList.musicSinger }"></h1>
+            </li>
+        </ul>
+        <li id="play">
+            <audio id="song" class="audiobutton" controls th:src="@{/music/} + ${ musicList.musicCode } + @{.mp3}"></audio>
+        </li>
+    </ul>
+</div>
+<!-- 페이지 처리 -->
+<div class="pagingArea" align="center">
+    <!-- 맨 앞으로 이동 버튼 -->
+    <button
+            th:onclick="'location.href=\'/findmusic/result?currentPage='+ @{${selectCriteria.startPage}} + '\''"
+            th:disabled="${selectCriteria.pageNo == 1}"
+    >
+        <<
+    </button>
+    <!-- 이전 페이지 버튼 -->
+    <button
+            th:onclick="'location.href=\'/findmusic/result?currentPage='+ @{${selectCriteria.pageNo - 1}} + '\''"
+            th:disabled="${selectCriteria.pageNo == 1}"
+    >
+        <
+    </button>
+    <!-- 숫자 버튼 -->
+    <th:block th:each="page : ${#numbers.sequence(selectCriteria.startPage, selectCriteria.endPage)}">
+        <button
+                th:text="${ page }"
+                th:onclick="'location.href=\'/findmusic/result?currentPage='+ @{${page}} + '\''"
+                th:disabled="${ selectCriteria.pageNo eq page }">
+        </button>
+    </th:block>
+
+    <!-- 다음 페이지 버튼 -->
+    <button
+            th:onclick="'location.href=\'/findmusic/result?currentPage='+ @{${selectCriteria.pageNo + 1}} + '\''"
+            th:disabled="${selectCriteria.pageNo == selectCriteria.maxPage}"
+    >
+        >
+    </button>
+    <!-- 마지막 페이지로 이동 버튼 -->
+    <button
+            th:onclick="'location.href=\'/findmusic/result?currentPage='+ @{${selectCriteria.maxPage}} + '\''"
+            th:disabled="${selectCriteria.pageNo == selectCriteria.maxPage}"
+    >
+        >>
+    </button>
+</div>
+
+</body>
+</html>
+
+<script th:inline="javascript">
+    function deletelist() {
+
+        fetch("findmusic/delete", {
+            method: "DELETE"
+        })
+            .then((response) => response.json())
+            .then((data) => location.href="/main");
+    }
+</script>

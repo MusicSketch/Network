@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이크 녹음</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/common.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/findmusic.css}"/>
+    <script
+            src="https://code.jquery.com/jquery-3.6.1.js"
+            integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+            crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <h1 id="titlelogo" onclick="location.href='/main'">Music Sketch</h1>
+    <hr id="titleline"/>
+
+    <img id="findMusicTitleimg" src="/img/headphones.png">
+    <h1 id="findMusicTitle">지금 나에게 맞는 음악은?</h1>
+    <hr id="findMusicTitleline"/>
+
+    <img id="findMusicmainimg" src="/img/mic.png">
+
+    <audio id="audiobar" controls>녹음된 소리를 재생할 audio 엘리먼트</audio>
+
+    <h1 id="findMusicSubTitle">자신의 가장 낮은 음과 높은 음을 녹음하세요!</h1>
+    <button id="startrecode">녹음 시작/종료</button>
+    <button id="checkmusiclist" onclick="location.href='/findmusic/result'">목록 확인하기</button>
+    <br><br>
+
+<!--<form action="/sendaudio" id="postaudio" method="post" enctype="multipart/form-data">-->
+<!--    <file id="postaudio2"></file>-->
+<!--    <input type="submit">-->
+<!--</form>-->
+
+<!--<form action="/sendaudio" id="postaudio" method="post" enctype="multipart/form-data">-->
+<!--&lt;!&ndash;    <input type="file" name="recordFile">&ndash;&gt;-->
+<!--    <input type="submit">-->
+<!--</form>-->
+
+<!--<a>다운로드</a>-->
+
+</body>
+<script>
+
+
+    // 엘리먼트 취득
+    const $audioEl = document.querySelector("audio");
+    const $btn = document.querySelector("button");
+    //const $download = document.querySelector("a");
+
+    // 녹음중 상태 변수
+    let isRecording = false;
+
+    // MediaRecorder 변수 생성
+    let mediaRecorder = null;
+
+    // 녹음 데이터 저장 배열
+    const audioArray = [];
+
+    let blob = null;
+
+    $btn.onclick = async function (event) {
+        if(!isRecording){
+
+            // 마이크 mediaStream 생성: Promise를 반환하므로 async/await 사용
+            const mediaStream = await navigator.mediaDevices.getUserMedia({audio: true});
+
+            // MediaRecorder 생성
+            mediaRecorder = new MediaRecorder(mediaStream);
+
+            // 이벤트핸들러: 녹음 데이터 취득 처리
+            mediaRecorder.ondataavailable = (event)=>{
+                audioArray.push(event.data); // 오디오 데이터가 취득될 때마다 배열에 담아둔다.
+                console.log("push");
+            }
+
+            var options = {
+                type: 'audio/webm',
+                audioBitsPerSecond : 22050,
+                // mimeType : 'audio/wav'
+            }
+
+            // 이벤트핸들러: 녹음 종료 처리 & 재생하기
+            mediaRecorder.onstop = (event)=>{
+
+
+
+                // 녹음이 종료되면, 배열에 담긴 오디오 데이터(Blob)들을 합친다: 코덱도 설정해준다.
+                blob = new Blob(audioArray, options/*, {"type": "audio/wav; codecs=wav"}*/);
+                //blob = new Blob(audioArray, {"type": "audio/flac"});
+                audioArray.splice(0); // 기존 오디오 데이터들은 모두 비워 초기화한다.
+
+                console.log("blob", blob);
+
+
+                // Blob 데이터에 접근할 수 있는 주소를 생성한다.
+                const blobURL = window.URL.createObjectURL(blob);
+                console.log("url : ", blobURL);
+                // audio엘리먼트로 재생한다.
+
+                $audioEl.src = blobURL;
+
+                console.log($audioEl);
+                $audioEl.play();
+
+            }
+
+            // 녹음 시작
+            mediaRecorder.start();
+            isRecording = true;
+
+        }else{
+            // 녹음 종료
+            mediaRecorder.stop();
+            isRecording = false;
+
+            mediaRecorder.addEventListener('stop', function () {
+                //let blob = new Blob(chunks);
+                console.log('stop')
+                // upload file
+                let formdata = new FormData();
+                formdata.append("fname", "record.webm");
+                console.log(blob);
+                formdata.append("data", blob);
+
+                let xhr = new XMLHttpRequest();
+                console.log(formdata.get("data"));
+                xhr.open("POST", "http://127.0.0.1:8001/findmusic/upload", false);
+                xhr.send(formdata);
+                console.log("send");
+            });
+        }
+    };
+
+
+    // postaudio.onsubmit = async (e) => {
+    //     e.preventDefault();
+    //     mediaRecorder.addEventListener('stop', function () {
+    //         //let blob = new Blob(chunks);
+    //         console.log('stop')
+    //         // upload file
+    //         let formdata = new FormData();
+    //         formdata.append("fname", "record.wav");
+    //         console.log(blob);
+    //         formdata.append("data", blob);
+    //
+    //         let xhr = new XMLHttpRequest();
+    //         console.log(formdata.get("data"));
+    //         xhr.open("POST", "http://192.168.0.148:5000/", false);
+    //         xhr.send(formdata);
+    //         console.log("asdf");
+    //     });
+    // }
+
+    //
+    // postaudio.onsubmit = async (e) => {
+    //     //console.log(postaudio.length);
+    //     //console.log(postaudio);
+    //     e.preventDefault();
+    //
+    //     let formdata = new FormData();
+    //     formdata.append("fname", "record.wav");
+    //     console.log(blob);
+    //     formdata.append("data", blob);
+    //
+    //
+    //     let response = await fetch('http://192.168.0.148:5000/', {
+    //         method: 'POST',
+    //         body: formdata,
+    //     });
+    //
+    //     console.log("시작2");
+    //
+    //     let result = await response.json();
+    //
+    //     alert(result.message);
+    // };
+
+    // postaudio.onsubmit = async (e) => {
+    //     e.preventDefault();
+    //
+    //     let fd = new FormData();
+    //     fd.append('fname', 'test.wav');
+    //     fd.append('data', postaudio);
+    //     $.ajax({
+    //         type: 'POST',
+    //         url: 'http://192.168.0.71:5000/',
+    //         data: fd,
+    //         processData: false,
+    //         contentType: false
+    //     }).done(function (data) {
+    //         console.log(data);
+    //     })
+    //
+    //
+    // };
+
+</script>
+
+</html>

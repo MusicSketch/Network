@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/common.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/list.css}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <!--메인 로고-->
+    <h1 id="titlelogo" onclick="location.href='/main'">Music Sketch</h1>
+    <hr id="titleline"/>
+
+    <!--로그인/회원가입-->
+    <button onclick="location.href='/login'" id="main-login">로그인</button>
+    <button onclick="location.href='/login/join'" id="main-join">회원가입</button>
+
+    <!--서브 타이틀-->
+    <img src="/img/music_note.png" id="musiclistresulticon"/>
+    <h1 id="musiclistresultname">나에게 맞는 음악</h1>
+    <hr id="listresultline"/>
+
+    <!--음악 리스트-->
+    <img src="/img/아이와 나의 바다.png" id="musiclist1">
+    <h1 id="musiclisttitle1">아이와 나의 바다</h1>
+    <h1 id="musiclistsinger1">아이유(IU)</h1>
+
+    <img src="/img/사건의 지평선.png" id="musiclist2">
+    <h1 id="musiclisttitle2">사건의 지평선</h1>
+    <h1 id="musiclistsinger2">윤하</h1>
+
+    <img src="/img/I.png" id="musiclist3">
+    <h1 id="musiclisttitle3">I</h1>
+    <h1 id="musiclistsinger3">태연</h1>
+
+    <img src="/img/그때 그 순간 그대로.png" id="musiclist4">
+    <h1 id="musiclisttitle4">그때 그 순간 그대로 (그그그)</h1>
+    <h1 id="musiclistsinger4">WSG워너비 (가야G)</h1>
+
+    <!--장르 선택-->
+<!--    <select name="genre" id="genre">-->
+<!--        <option value="발라드">발라드</option>-->
+<!--        <option value="댄스">댄스</option>-->
+<!--        <option value="랩_힙합">랩_힙합</option>-->
+<!--        <option value="R&B_Soul">R&B_Soul</option>-->
+<!--        <option value="인디음악">인디음악</option>-->
+<!--        <option value="록_메탈">록_메탈</option>-->
+<!--        <option value="트로트">트로트</option>-->
+<!--        <option value="포크_블루스">포크_블루스</option>-->
+<!--        <option value="POP">POP</option>-->
+<!--        <option value="일렉트로니카">일렉트로니카</option>-->
+<!--        <option value="포크_블루스_컨트리">포크_블루스_컨트리</option>-->
+<!--        <option value="OST">OST</option>-->
+<!--        <option value="J-POP">J-POP</option>-->
+<!--    </select>-->
+
+    <!--날짜 선택-->
+    <p><input type="date" value="2022-09-26" id="date"></p>
+</body>
+</html>

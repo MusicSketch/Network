@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/common.css}"/>
+    <link rel="stylesheet" href="/css/owl.carousel.css" />
+    <link rel="stylesheet" href="/css/owl.theme.default.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/js/owl.carousel.js"></script>
+    <script src="/js/owl.autoplay.js"></script>
+    <script src="/js/owl.navigation.js"></script>
+    <script>
+        $(function () {
+            $('.owl-carousel').owlCarousel({
+                items: 4,
+                margin: 10,
+                loop: true,
+                nav: true,
+                navText: ['' +
+                '   <button id="listboxarrow" class="prev">\n' +
+                '        <img src="img/one_arrow_left.png">\n' +
+                '   </button>',
+                '    <button id="rightlistboxarrow" class="next">\n' +
+                '        <img src="img/one_arrow_left.png">\n' +
+                '    </button>'],
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <!--메인 로고-->
+    <h1
+        id="titlelogo"
+        onclick="location.href='/main'">Music Sketch</h1>
+    <hr id="titleline"/>
+
+    <!--로그인/회원가입-->
+    <h1 id="welcome">스케치님 환영합니다</h1>
+<!--    <button onclick="location.href='/login/login'" id="main-login">로그인</button>-->
+    <button onclick="location.href='/login/join'" id="main-join">로그아웃</button>
+
+    <!--find music-->
+    <img src="img/headphones.png" id="findmusicicon"/>
+        <h1 id="menufindmusictxt">지금 나에게 맞는 음악은?</h1>
+        <button onclick="location.href='/findmusic'" id="menufindmusicbtn">
+            <img src="img/arrow_right.png"/>
+        </button>
+    <hr id="menufindmusicline"/>
+
+    <!--find music by image-->
+    <img src="img/image.png" id="imagesearchmusicicon"/>
+    <h1 id="imagesearchmusictxt">앨범 이미지로 비슷한 노래 추천 받기</h1>
+    <button id="imagesearchmusicbtn">
+        <img src="img/arrow_right.png"/>
+    </button>
+    <hr id="imagesearchmusicline"/>
+
+    <!--서브 타이틀-->
+    <h1 id="resultmusiclisttitle">많이 추천받은 음악</h1>
+    <hr id="resultmusiclistline"/>
+
+    <!--첫 번째 음악 목록-->
+    <img src="img/library_music.png" id="resultmusiclisticon"/>
+    <h1 id="resultmusiclisttxt">신나는 댄스 파티!</h1>
+    <div id="wrapper">
+        <div class="owl-carousel">
+            <div th:each="dancemusic : ${ dancelist }" class="item">
+                <img th:src="@{/musicimg/} + ${ dancemusic.musicCode } + @{.jpg}">
+                <h1 th:text="${dancemusic.musicTitle}" id="dancemusictitle"></h1>
+                <h1 th:text="${ dancemusic.musicSinger }" id="dancemusicsinger"></h1>
+            </div>
+        </div>
+    </div>
+
+    <hr id="resultmusiclistsubline"/>
+    <button id="listboxarrow" class="prev">
+        <img src="img/one_arrow_left.png">
+    </button>
+    <button id="rightlistboxarrow" class="next">
+        <img src="img/one_arrow_left.png">
+    </button>
+
+    <!--두 번째 음악 목록-->
+    <img src="img/library_music.png" id="resultmusiclisticon2">
+    <h1 id="resultmusiclisttxt2">노래방에선 발라드지</h1>
+    <div id="wrapper2">
+        <div class="owl-carousel" id="carousel2">
+            <div th:each="baladmusic : ${ baladlist }" class="item">
+                <img th:src="@{/musicimg/} + ${ baladmusic.musicCode } + @{.jpg}">
+                <h1 th:text="${ baladmusic.musicTitle }" id="baladmusictitle"></h1>
+                <h1 th:text="${ baladmusic.musicSinger }" id="baladmusicsinger"></h1>
+            </div>
+        </div>
+    </div>
+
+
+    <hr id="resultmusiclistsubline2"/>
+<!--    <button id="listboxarrow2" class="prev">-->
+<!--        <img src="img/one_arrow_left.png">-->
+<!--    </button>-->
+<!--    <button id="rightlistboxarrow2" class="next">-->
+<!--        <img src="img/one_arrow_left.png">-->
+<!--    </button>-->
+
+</body>
+</html>

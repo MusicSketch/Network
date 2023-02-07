@@ -1,0 +1,337 @@
+@font-face {
+    font-family: 'Cafe24 Shiningstar';
+    src: url('../font/Cafe24Shiningstar.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Gmarket Sans TTF';
+    src: url('../font/GmarketSansTTFLight.ttf') format('truetype');
+}
+
+#findmusicicon{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 440px;
+    top: 234px;
+
+    /*background: url(headphones.png);*/
+}
+
+#menufindmusictxt{
+    position: absolute;
+    width: 403px;
+    height: 27px;
+    left: 539px;
+    top: 254px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+#menufindmusicbtn{
+    position: absolute;
+    width: 65px;
+    height: 45px;
+    left: 864px;
+    top: 250px;
+
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    background: #86A3E1;
+    opacity: 0.9;
+    border-radius: 20px;
+}
+
+#menufindmusicbtn:hover{
+    background-color: #6580BB;
+}
+
+#menufindmusicline{
+    position: absolute;
+    width: 522px;
+    height: 0px;
+    left: 430px;
+    top: 305px;
+
+    border: 3px solid #86A3E1;
+    background-color: #86A3E1;
+    transform: rotate(-0.11deg);
+}
+
+#imagesearchmusicicon{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 972px;
+    top: 240px;
+}
+
+#imagesearchmusictxt{
+    position: absolute;
+    width: 403px;
+    height: 27px;
+    left: 1060px;
+    top: 253px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+#imagesearchmusicbtn{
+    position: absolute;
+    width: 65px;
+    height: 45px;
+    left: 1406px;
+    top: 250px;
+
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    background: #86A3E1;
+    opacity: 0.9;
+    border-radius: 20px;
+}
+
+#imagesearchmusicbtn:hover{
+    background-color: #6580BB;
+}
+
+#imagesearchmusicline{
+    position: absolute;
+    width: 522px;
+    height: 0px;
+    left: 972px;
+    top: 304px;
+
+    border: 3px solid #86A3E1;
+    transform: rotate(-0.11deg);
+    background-color: #86A3E1;
+}
+
+#resultmusiclisttitle{
+    position: absolute;
+    width: 197px;
+    height: 40px;
+    left: 340px;
+    top: 409px;
+
+    font-family: 'Cafe24 Shiningstar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+
+#resultmusiclistline{
+    position: absolute;
+    width: 1283.01px;
+    height: 0px;
+    left: 320px;
+    top: 475px;
+
+    border: 1px solid #ACB7E1;
+}
+
+#resultmusiclisticon{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 428px;
+    top: 530px;
+}
+
+#resultmusiclisttxt{
+    position: absolute;
+    width: 403px;
+    height: 27px;
+    left: 537px;
+    top: 542px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+#resultmusiclistsubline{
+    position: absolute;
+    width: 564px;
+    height: 0px;
+    left: 428px;
+    top: 597px;
+
+    border: 3px solid #86A3E1;
+    background-color: #86A3E1;
+}
+
+#listboxarrow{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: -50px;
+    top: -250px;
+
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    background-color: white;
+}
+
+#rightlistboxarrow{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 1050px;
+    top: -260px;
+
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    background-color: white;
+    transform: rotate(-180deg);
+}
+
+#resultmusiclisticon2{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 433px;
+    top: 1099px;
+}
+
+#resultmusiclisttxt2{
+    position: absolute;
+    width: 403px;
+    height: 27px;
+    left: 542px;
+    top: 1111px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+#resultmusiclistsubline2{
+    position: absolute;
+    width: 564px;
+    height: 0px;
+    left: 433px;
+    top: 1166px;
+
+    border: 3px solid #86A3E1;
+    transform: rotate(-0.11deg);
+    background-color: #86A3E1;
+}
+
+#listboxarrow2{
+    position: absolute;
+    width: 35px;
+    height: 50px;
+    left: 418px;
+    top: 1317px;
+
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    background-color: white;
+}
+
+#rightlistboxarrow2{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 1499px;
+    top: 1317px;
+
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    background-color: white;
+    transform: rotate(-180deg);
+}
+
+#dancemusictitle{
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+#dancemusicsinger{
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+
+    color: #86A3E1;
+}
+
+#carousel2{
+    position: absolute;
+    left: 495px;
+    top: 1205px;
+}
+
+#baladmusictitle{
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+#baladmusicsinger{
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+
+    color: #86A3E1;
+}

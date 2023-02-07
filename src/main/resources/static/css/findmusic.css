@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'Cafe24 Shiningstar';
+    src: url('../font/Cafe24Shiningstar.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Gmarket Sans TTF';
+    src: url('../font/GmarketSansTTFLight.ttf') format('truetype');
+}
+
+#titlelogo{
+    position: absolute;
+    width: 203px;
+    height: 120px;
+    left: 117px;
+    top: 0px;
+
+    font-family: 'Cafe24 Shiningstar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 59px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+
+    color: #000000;
+}
+
+#findMusicLine{
+    /* Line 2 */
+
+
+    position: absolute;
+    width: 522px;
+    height: 0px;
+    left: 699px;
+    top: 299px;
+
+    /* 메인컬러 */
+
+    border: 3px solid #86A3E1;
+    transform: rotate(-0.11deg);
+}
+#findMusicMain{
+    /* 지금 나에게 맞는 음악은? */
+
+
+    position: absolute;
+    width: 228px;
+    height: 27px;
+    left: 885px;
+    top: 248px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+
+    /* 검은색 */
+
+    color: #000000;
+}
+#headPhone{
+    /* headphones_FILL0_wght400_GRAD0_opsz48 1 */
+
+
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 806px;
+    top: 218px;
+
+    /*background: url(headphones_FILL0_wght400_GRAD0_opsz48.png);*/
+
+}
+
+#findMusicTitleimg{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 806px;
+    top: 235px;
+}
+
+#findMusicTitle{
+    position: absolute;
+    width: 228px;
+    height: 27px;
+    left: 885px;
+    top: 248px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+#findMusicTitleline{
+    position: absolute;
+    width: 522px;
+    height: 0px;
+    left: 699px;
+    top: 299px;
+
+    background-color: #86A3E1;
+    border: 3px solid #86A3E1;
+    transform: rotate(-0.11deg);
+}
+
+#findMusicmainimg{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 920px;
+    top: 375px;
+
+}
+
+#findMusicSubTitle{
+    position: absolute;
+    width: 317px;
+    height: 27px;
+    left: 820px;
+    top: 540px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+#audiobar{
+    position: absolute;
+    /*width: 80px;*/
+    height: 80px;
+    left: 810px;
+    top: 450px;
+}
+
+#startrecode{
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    left: 866px;
+    top: 600px;
+
+    background: #86A3E1;
+    opacity: 0.9;
+    border-radius: 10px;
+    border-style: none;
+}
+
+#checkmusiclist{
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    left: 866px;
+    top: 660px;
+
+    /* 메인컬러 */
+
+    background: #86A3E1;
+    opacity: 0.9;
+    border-radius: 10px;
+    border-style: none;
+}

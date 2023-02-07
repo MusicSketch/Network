@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.greedy.thymeleaf.model.dao.MusicMapper">
+
+    <resultMap id="musicResultMap" type="MusiclistDTO">
+        <id property="musicCode" column="MUSIC_CODE"/>
+        <result property="musicTitle" column="MUSIC_TITLE"/>
+        <result property="musicGenre" column="MUSIC_GENRE"/>
+        <result property="musicSinger" column="MUSIC_SINGER"/>
+    </resultMap>
+
+    <select id="searchMusicByDance" resultMap="musicResultMap">
+        SELECT
+               A.MUSIC_CODE
+             , A.MUSIC_TITLE
+             , A.MUSIC_GENRE
+             , A.MUSIC_SINGER
+          FROM MUSIC_LIST A
+         WHERE A.MUSIC_GENRE = '댄스'
+         ORDER BY A.MUSIC_CODE
+    </select>
+
+    <select id="searchMusicByBalad" resultMap="musicResultMap">
+        SELECT
+               A.MUSIC_CODE
+             , A.MUSIC_TITLE
+             , A.MUSIC_GENRE
+             , A.MUSIC_SINGER
+          FROM MUSIC_LIST A
+         WHERE A.MUSIC_GENRE = '발라드'
+         ORDER BY A.MUSIC_CODE
+    </select>
+
+    <select id="AllMusicList" resultMap="musicResultMap">
+        SELECT
+               A.RNUM
+             , A.MUSIC_CODE
+             , A.MUSIC_TITLE
+             , A.MUSIC_GENRE
+             , A.MUSIC_SINGER
+          FROM (SELECT ROWNUM RNUM
+             , B.MUSIC_CODE
+             , B.MUSIC_TITLE
+             , B.MUSIC_GENRE
+             , B.MUSIC_SINGER
+          FROM (SELECT C.MUSIC_CODE
+             , C.MUSIC_TITLE
+             , C.MUSIC_GENRE
+             , C.MUSIC_SINGER
+          FROM MUSIC_LIST C
+         ) B
+         <![CDATA[
+            WHERE ROWNUM <= #{ endRow }
+         ]]>
+        ) A
+         WHERE A.RNUM >= #{ startRow }
+         ORDER BY 1 ASC
+    </select>
+
+    <select id="selectTotalCount" resultType="_int">
+    SELECT
+    COUNT(*)
+    FROM MUSIC_LIST A
+    </select>
+
+    <select id="findResultList" resultMap="musicResultMap">
+        SELECT
+               A.RNUM
+             , D.MUSIC_CODE
+             , A.MUSIC_TITLE
+             , A.MUSIC_GENRE
+             , A.MUSIC_SINGER
+          FROM (SELECT ROWNUM RNUM
+             , B.MUSIC_CODE
+             , B.MUSIC_TITLE
+             , B.MUSIC_GENRE
+             , B.MUSIC_SINGER
+          FROM (SELECT C.MUSIC_CODE
+             , C.MUSIC_TITLE
+             , C.MUSIC_GENRE
+             , C.MUSIC_SINGER
+          FROM MUSIC_LIST C
+          JOIN TEMP D ON(C.MUSIC_CODE = D.MUSIC_CODE)
+         ) B
+         <![CDATA[
+            WHERE ROWNUM <= #{ endRow }
+         ]]>
+        ) A
+          JOIN TEMP D ON(A.MUSIC_CODE = D.MUSIC_CODE)
+         WHERE A.RNUM >= #{ startRow }
+           AND A.MUSIC_CODE = D.MUSIC_CODE
+         ORDER BY 1 ASC
+    </select>
+
+<!--    <select id="findResultList" resultMap="musicResultMap">-->
+<!--        SELECT-->
+<!--               B.MUSIC_CODE-->
+<!--             , A.MUSIC_TITLE-->
+<!--             , A.MUSIC_GENRE-->
+<!--             , A.MUSIC_SINGER-->
+<!--          FROM MUSIC_LIST A, TEMP B-->
+<!--         WHERE A.MUSIC_CODE = B.MUSIC_CODE-->
+<!--    </select>-->
+
+    <insert id="tempList" parameterType="ResponseDTO">
+        INSERT INTO TEMP (MUSIC_CODE) VALUES (#{ songId })
+    </insert>
+
+    <delete id="delete">
+        DELETE FROM TEMP
+    </delete>
+
+</mapper>

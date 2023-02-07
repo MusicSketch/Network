@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/common.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/findpwd.css}"/>
+</head>
+<body>
+    <h1 id="titlelogo" onclick="location.href='/main'">Music Sketch</h1>
+    <h1 id="findpwdtitle">비밀번호 찾기</h1>
+
+    <h1 id="subfindpwdtitle">아이디 입력</h1>
+    <h1 id="subfindpwdl">비밀번호를 찾고자 하는 아이디를 입력해 주세요</h1>
+    <hr id="findpwdline"/>
+
+    <box id="findpwduseridBox">
+        <input id="userName" type="text" placeholder="아이디">
+    </box>
+
+    <h1 id="findpwdfindid">아이디를 모르시나요?
+        <button onclick="location.href='/login/findid'" id="findpwdfindidbtn">아이디 찾기</button>
+    </h1>
+
+    <button id="findpwd1btn" onclick="location.href='/login/findpwd2'">다음</button>
+
+</body>
+</html>

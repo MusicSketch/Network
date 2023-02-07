@@ -1,0 +1,1043 @@
+@font-face {
+    font-family: 'Cafe24 Shiningstar';
+    src: url('../font/Cafe24Shiningstar.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Gmarket Sans TTF';
+    src: url('../font/GmarketSansTTFLight.ttf') format('truetype');
+}
+
+title1{
+    position: absolute;
+    width: 228px;
+    height: 27px;
+    left: 885px;
+    top: 248px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+#titlelogo{
+    position: absolute;
+    width: 203px;
+    height: 120px;
+    left: 117px;
+    top: 0px;
+
+    font-family: 'Cafe24 Shiningstar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 59px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+
+    color: #000000;
+}
+
+#main-login{
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    left: 1492px;
+    top: 70px;
+
+    font-family: 'Cafe24 Shiningstar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    background-color: white;
+    color: #000000;
+}
+
+#main-join{
+    position: absolute;
+    width: 90px;
+    height: 40px;
+    left: 1595px;
+    top: 70px;
+
+    font-family: 'Cafe24 Shiningstar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    background-color: white;
+    color: #000000;
+}
+
+#titleline{
+    position: absolute;
+    width: 400px;
+    height: 0px;
+    left: 117px;
+    top: 120px;
+    background-color: #86A3E1;
+
+    border: 1px solid #86A3E1;
+}
+
+#musiclistresulticon{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 850px;
+    top: 199px;
+}
+
+#musiclistresultname{
+    position: absolute;
+    width: 250px;
+    height: 40px;
+    left: 922px;
+    top: 190px;
+
+    font-family: 'Cafe24 Shiningstar';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 37px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+
+#listresultline{
+    position: absolute;
+    width: 650px;
+    height: 0px;
+    left: 695px;
+    top: 265px;
+
+    background-color: #86A3E1;
+    border: 1px solid #86A3E1;
+}
+
+#musiclist1{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 475px;
+    top: 317px;
+}
+
+#musiclisttitle1{
+    position: absolute;
+    width: 231px;
+    height: 27px;
+    left: 672px;
+    top: 358px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+#musiclistsinger1{
+    position: absolute;
+    width: 212px;
+    height: 27px;
+    left: 671px;
+    top: 399px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+
+    color: #86A3E1;
+}
+
+#musiclist2{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 1017px;
+    top: 317px;
+}
+
+#musiclisttitle2{
+    position: absolute;
+    width: 231px;
+    height: 27px;
+    left: 1214px;
+    top: 358px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+#musiclistsinger2{
+    position: absolute;
+    width: 212px;
+    height: 27px;
+    left: 1214px;
+    top: 399px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+
+    color: #86A3E1;
+}
+
+#musiclist3{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 475px;
+    top: 519px;
+}
+
+#musiclisttitle3{
+    position: absolute;
+    width: 231px;
+    height: 27px;
+    left: 671px;
+    top: 560px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+#musiclistsinger3{
+    position: absolute;
+    width: 212px;
+    height: 27px;
+    left: 671px;
+    top: 601px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+
+    color: #86A3E1;
+}
+
+#musiclist4{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 1017px;
+    top: 519px;
+}
+
+#musiclisttitle4{
+    position: absolute;
+    width: 274px;
+    height: 27px;
+    left: 1213px;
+    top: 553px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+#musiclistsinger4{
+    position: absolute;
+    width: 212px;
+    height: 27px;
+    left: 1213px;
+    top: 594px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+
+    color: #86A3E1;
+}
+
+#genre{
+    position: absolute;
+    width: 103px;
+    height: 40.82px;
+    left: 725px;
+    top: 210px;
+
+    color: white;
+    background: #86A3E1;
+    opacity: 0.9;
+    border-radius: 10px;
+    border-style: none;
+    padding: 5px
+}
+
+/*로그인 화면*/
+/* 로그인 */
+
+#main-loginPage{
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    left: 910px;
+    top: 217px;
+
+    font-family: 'Cafe24 Shiningstar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 51px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+#userNameBox{
+    position: absolute;
+    width: 350px;
+    height: 40px;
+    left: 692px;
+    top: 303px;
+
+}
+#userName{
+    width:350px;
+    height:40px;
+}
+#userPwBox{
+    position: absolute;
+    width: 350px;
+    height: 40px;
+    left: 692px;
+    top: 375px;
+
+}
+#userPw{
+    width: 350px;
+    height: 40px;
+}
+#signIn{
+    /* Rectangle 2310 */
+
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 150px;
+    height: 112px;
+    left: 1077px;
+    top: 303px;
+
+    /* 메인컬러 */
+
+    background: #86A3E1;
+    /* 설명색 */
+
+    border: 1px solid #635970;
+}
+#signInText{
+
+
+    /* 로그인 */
+
+
+    position: absolute;
+    width: 150px;
+    height: 112px;
+    left: 1077px;
+    top: 303px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* 흰색 */
+
+    color: #FFFFFF;
+
+}
+#saveId{
+    /* 아이디 저장 */
+
+
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    left: 733px;
+    top: 431px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+
+    /* 설명색 */
+
+    color: #635970;
+}
+#loginCheckbox{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 692px;
+    top: 431px;
+
+}
+#findPw{
+    /* 비밀번호 찾기 */
+
+
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    left: 748px;
+    top: 520px;
+
+    /* 메인컬러 */
+
+    background: #86A3E1;
+    opacity: 0.9;
+    border-radius: 10px;
+    border-style: none;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* 검은색 */
+
+    color: #000000;
+
+
+}
+
+#findId{
+    /* 비밀번호 찾기 */
+
+
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    left: 968px;
+    top: 520px;
+
+    /* 메인컬러 */
+
+    background: #86A3E1;
+    opacity: 0.9;
+    border-radius: 10px;
+    border-style: none;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* 검은색 */
+
+    color: #000000;
+}
+
+#join{
+    /* 회원가입 */
+
+
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    left: 320px;
+    top: 202px;
+
+    font-family: 'Cafe24 Shiningstar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 51px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* 검은색 */
+
+    color: #000000;
+}
+
+#joinLine{
+    /* Line 1 */
+
+
+    position: absolute;
+    width: 1280px;
+    height: 0px;
+    left: 320px;
+    top: 282px;
+
+    /* 검은색 */
+
+    border: 2px solid #000000;
+}
+
+#joinHeader1{
+    /* 01 약관동의 */
+
+
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    left: 1268px;
+    top: 212px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* 메인컬러 */
+
+    color: #86A3E1;
+
+}
+#joinHeader2{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    left: 1384px;
+    top: 212px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* 설명색 */
+
+    color: #635970;
+
+}
+#joinHeader3{
+    /* 03 가입완료 */
+
+
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    left: 1500px;
+    top: 212px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* 설명색 */
+
+    color: #635970;
+
+}
+#condition{
+    /* 약관동의 */
+
+
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    left: 537px;
+    top: 304px;
+
+    font-family: 'Cafe24 Shiningstar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+
+    /* 검은색 */
+
+
+}
+#conditionLine{
+    /* Line 2 */
+
+
+    position: absolute;
+    width: 846px;
+    height: 0px;
+    left: 537px;
+    top: 390px;
+
+    /* 검은색 */
+
+    border: 2px solid #000000;
+}
+#description{
+    /* Rectangle 2311 */
+
+
+    position: absolute;
+    width: 845px;
+    height: 709px;
+    left: 537px;
+    top: 413px;
+
+    /* 서브컬러 */
+
+    background: #ACB7E1;
+}
+#certified{
+    /* 본인 인증방법 선택 */
+
+
+    position: absolute;
+    width: 196px;
+    height: 50px;
+    left: 537px;
+    top: 1164px;
+
+    font-family: 'Cafe24 Shiningstar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+
+    /* 검은색 */
+
+    color: #000000;
+
+}
+#certifiedLine{
+    /* Line 3 */
+
+
+    position: absolute;
+    width: 846px;
+    height: 0px;
+    left: 537px;
+    top: 1250px;
+
+    /* 검은색 */
+
+    border: 2px solid #000000;
+}
+#phone{
+    /* 휴대폰 본인인증 */
+
+
+    position: absolute;
+    width: 292.5px;
+    height: 64px;
+    left: 813.25px;
+    top: 1260px;
+
+    font-family: 'Cafe24 Shiningstar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* 설명색 */
+
+}
+#backButton{
+    /* Group 1019 */
+
+
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    left: 750px;
+    top: 1397px;
+    /* 서브컬러 */
+
+    background: #ACB7E1;
+    opacity: 0.9;
+    border-radius: 10px;
+    border-style: none;
+}
+#nextButton{
+    /* Group 1022 */
+
+
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    left: 971px;
+    top: 1397px;
+
+    /* 메인컬러 */
+
+    background: #86A3E1;
+    opacity: 0.9;
+    border-radius: 10px;
+    border-style: none;
+}
+
+#finishJoin{
+    /* 회원가입이 완료되었습니다. */
+
+
+    position: absolute;
+    width: 341px;
+    height: 50px;
+    left: 850px;
+    top: 323px;
+
+    font-family: 'Cafe24 Shiningstar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* 메인컬러 */
+
+    color: #86A3E1;
+
+}
+#findIdPage{
+    /* 아이디 찾기 */
+
+
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    left: 870px;
+    top: 217px;
+
+    font-family: 'Cafe24 Shiningstar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 51px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* 검은색 */
+
+    color: #000000;
+}
+
+#findIdName{
+    /* Rectangle 2310 */
+
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 413px;
+    height: 40px;
+    left: 658px;
+    top: 335px;
+
+    /* 흰색 */
+
+    background: #FFFFFF;
+    /* 설명색 */
+
+    border: 1px solid #635970;
+}
+#findEmail{
+    /* 가입메일주소 */
+
+
+    position: absolute;
+    width: 177.3px;
+    height: 40px;
+    left: 667.85px;
+    top: 407px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+
+    /* 설명색 */
+
+    color: #635970;
+
+}
+
+#findIdSelectEmail{
+    /* Rectangle 2310 */
+
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 197px;
+    height: 40px;
+    left: 875px;
+    top: 407px;
+
+    /* 흰색 */
+
+    background: #FFFFFF;
+    /* 설명색 */
+
+    border: 1px solid #635970;
+}
+
+#findIdResult{
+    /* OOO님의 아이디는 _________ 입니다. */
+
+
+    position: absolute;
+    width: 414px;
+    height: 50px;
+    left: 752px;
+    top: 266px;
+
+    font-family: 'Cafe24 Shiningstar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* 검은색 */
+
+    color: #000000;
+
+}
+
+#musiclist{
+    display: flex;
+    height: 200px;
+    margin: 10px;
+    /*justify-content: center;*/
+    align-content: center;
+    padding-left: 680px;
+}
+
+#submusiclist{
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    width: 700px;
+    margin: 50px;
+    /*margin-right: -10px;*/
+    display: flex;
+}
+
+#musiclistimg{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+}
+
+#joinHeader4{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    left: 1268px;
+    top: 212px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* 메인컬러 */
+
+    color: #635970;
+
+}
+
+#joinHeader5{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    left: 1384px;
+    top: 212px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* 설명색 */
+
+    color: #86A3E1;
+}
+
+#joinHeader6{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    left: 1500px;
+    top: 212px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* 설명색 */
+
+    color: #86A3E1;
+}
+
+#backButton2{
+    /* Group 1019 */
+
+
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    left: 750px;
+    top: 500px;
+    /* 서브컬러 */
+
+    background: #ACB7E1;
+    opacity: 0.9;
+    border-radius: 10px;
+    border-style: none;
+}
+
+#nextButton2{
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    left: 971px;
+    top: 500px;
+
+    /* 메인컬러 */
+
+    background: #86A3E1;
+    opacity: 0.9;
+    border-radius: 10px;
+    border-style: none;
+}
+
+#welcome{
+    position: absolute;
+    width: 212px;
+    height: 40px;
+    left: 1334px;
+    top: 48px;
+
+    font-family: 'Cafe24 Shiningstar';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 37px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}

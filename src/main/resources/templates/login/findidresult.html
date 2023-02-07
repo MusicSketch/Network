@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/common.css}"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<h1 id="titlelogo" onclick="location.href='/main'">Music Sketch</h1>
+
+
+<button onclick="location.href='/login/login'" id="main-login">로그인</button>
+<button onclick="location.href='/login/join'" id="main-join">회원가입</button>
+
+  <h1 id="findIdResult"> 000님의 아이딘느 _______ 입니다.</h1>
+
+  <button onclick="location.href='/main'" id="findPw">비밀번호 찾기</button>
+  <button onclick="location.href='/main'" id="findId">아이디 찾기</button>
+</body>
+</html>

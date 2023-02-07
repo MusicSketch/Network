@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD SQL Map Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+    <configuration>
+    <settings>
+        <setting name="callSettersOnNulls" value="true" />
+        <setting name="jdbcTypeForNull" value="NULL" />
+    </settings>
+
+    <typeAliases>
+        <typeAlias alias="ResponseDTO" type="com.greedy.thymeleaf.model.dto.ResponseDTO" />
+        <typeAlias alias="MusicListDTO" type="com.greedy.thymeleaf.model.dto.MusiclistDTO"/>
+    </typeAliases>
+
+    <mappers>
+        <mapper resource="MusicMapper.xml" />
+    </mappers>
+</configuration>

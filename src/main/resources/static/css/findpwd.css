@@ -1,0 +1,205 @@
+@font-face {
+    font-family: 'Cafe24 Shiningstar';
+    src: url('../font/Cafe24Shiningstar.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Gmarket Sans TTF';
+    src: url('../font/GmarketSansTTFLight.ttf') format('truetype');
+}
+
+#findpwdtitle{
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    left: 872px;
+    top: 198px;
+
+    font-family: 'Cafe24 Shiningstar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 51px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+
+#subfindpwdtitle{
+    position: absolute;
+    width: 628px;
+    height: 25px;
+    left: 646px;
+    top: 280px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+#subfindpwdl{
+    position: absolute;
+    width: 354px;
+    height: 25px;
+    left: 647px;
+    top: 322px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+
+    color: #635970;
+}
+
+#findpwdline{
+    position: absolute;
+    width: 628px;
+    height: 0px;
+    left: 647px;
+    top: 347px;
+
+    border: 2px solid #ECECEC;
+}
+
+#findpwduseridBox{
+    position: absolute;
+    width: 414px;
+    height: 40px;
+    left: 780px;
+    top: 385px;
+}
+
+#findpwdfindid{
+    position: absolute;
+    width: 414px;
+    height: 25px;
+    left: 780px;
+    top: 431px;
+
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+
+    color: #635970;
+}
+
+#findpwdfindidbtn{
+    color: #86A3E1;
+    border-style: none;
+    background-color: white;
+    font-family: 'Gmarket Sans TTF';
+    font-style: normal;
+}
+
+#findpwd1btn{
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    left: 872px;
+    top: 498px;
+
+    /* 메인컬러 */
+
+    background: #86A3E1;
+    opacity: 0.9;
+    border-radius: 10px;
+    border-style: none;
+}
+
+#findpwd2title{
+    position: absolute;
+    width: 250px;
+    height: 40px;
+    left: 835px;
+    top: 198px;
+
+    font-family: 'Cafe24 Shiningstar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 51px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+}
+
+#changepwdbtn{
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    left: 856px;
+    top: 566px;
+
+    background: #86A3E1;
+    opacity: 0.9;
+    border-radius: 10px;
+    border-style: none;
+}
+
+#newpwd{
+    position: absolute;
+    width: 414px;
+    height: 40px;
+    left: 753px;
+    top: 332px;
+
+}
+
+#newpwdtyp{
+    position: absolute;
+    width: 414px;
+    height: 40px;
+    left: 753px;
+    top: 404px;
+}
+
+#findpwdfinishtitle{
+    position: absolute;
+    width: 500px;
+    height: 50px;
+    left: 752px;
+    top: 266px;
+
+    font-family: 'Cafe24 Shiningstar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+
+#findpwdlogin{
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    left: 856px;
+    top: 500px;
+
+    background: #86A3E1;
+    opacity: 0.9;
+    border-radius: 10px;
+    border-style: none;
+}

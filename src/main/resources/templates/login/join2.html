@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/common.css}"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<h1 id="titlelogo" onclick="location.href='/main'">Music Sketch</h1>
+<h1 id="join">회원가입</h1>
+<p id="joinHeader4">01 약관동의&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></p>
+<p id="joinHeader5">02 정보입력&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></p>
+<p id="joinHeader3">03 가입완료&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<hr id="joinLine"/>
+<p id="condition"> 약관동의</p>
+<hr id="conditionLine"/>
+<div id="description"></div>
+
+<button onclick="location.href='/login/join'" id="backButton">이전 단계</button>
+<button onclick="location.href='/login/join3'" id="nextButton">다음 단계</button>
+
+</body>
+</html>

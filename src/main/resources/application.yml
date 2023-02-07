@@ -1,0 +1,18 @@
+server:
+  port: 8001
+
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: C##MUSIC
+    password: MUSIC
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+mybatis:
+  mapper-locations: mybatis/mappers/*.xml
+  type-aliases-package: com.greedy.thymeleaf
